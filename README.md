@@ -80,36 +80,27 @@ Built by someone who used it to evaluate 740+ job offers, generate 100+ tailored
 
 ## Quick Start
 
+### Prerequisites
+Before starting, make sure you have **Node.js** installed on your system:
+* **Windows (PowerShell/CMD):** `winget install OpenJS.NodeJS` (then restart your terminal)
+* **Linux (Ubuntu/Debian):** `sudo apt update && sudo apt install -y nodejs npm`
+* **macOS (Homebrew):** `brew install node`
+
+### 🚀 1-Command Onboarding & Setup
+Once Node.js is ready, run the interactive onboarding setup:
+
 ```bash
-# 1. Clone and install
+# 1. Clone the repository
 git clone https://github.com/santifer/career-ops.git
-cd career-ops && npm install
-npx playwright install chromium   # Required for PDF generation
+cd career-ops
 
-# 2. Check setup
-npm run doctor                     # Validates all prerequisites
-
-# 3. Configure
-cp config/profile.example.yml config/profile.yml  # Edit with your details
-cp templates/portals.example.yml portals.yml       # Customize companies
-
-# 4. Add your CV
-# Create cv.md in the project root with your CV in markdown
-
-# 5. Personalize with Claude
-claude   # Open Claude Code in this directory
-
-# Then ask Claude to adapt the system to you:
-# "Change the archetypes to backend engineering roles"
-# "Translate the modes to English"
-# "Add these 5 companies to portals.yml"
-# "Update my profile with this CV I'm pasting"
-
-# 6. Start using
-# Paste a job URL or run /career-ops
+# 2. Run the universal setup installer
+node setup.mjs
 ```
 
-> **The system is designed to be customized by Claude itself.** Modes, archetypes, scoring weights, negotiation scripts -- just ask Claude to change them. It reads the same files it uses, so it knows exactly what to edit.
+This script will guide you through configuring your profile, importing or creating a CV, and automatically generating launchers for Windows (`launch-dashboard.bat`) and Linux/macOS (`launch-dashboard.sh`).
+
+> **The system is designed to be customized by your AI agent.** Modes, archetypes, scoring weights, negotiation scripts -- just ask your AI agent to change them. It reads the same files it uses, so it knows exactly what to edit.
 
 See [docs/SETUP.md](docs/SETUP.md) for the full setup guide.
 
